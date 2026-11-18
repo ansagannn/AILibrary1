@@ -1,0 +1,14 @@
+# Only for local development; NOT a production configuration.
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: qor_search
+      POSTGRES_USER: qor
+      POSTGRES_PASSWORD: ${QOR_POSTGRES_PASSWORD:?Set QOR_POSTGRES_PASSWORD first}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - qor_pg_data:/var/lib/postgresql/data
+volumes:
+  qor_pg_data:

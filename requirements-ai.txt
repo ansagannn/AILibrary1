@@ -1,0 +1,4 @@
+-r requirements.txt
+psycopg[binary]>=3.2,<4
+httpx>=0.27,<1
+sentence-transformers>=3,<6

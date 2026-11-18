@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: qor-ai-librarian
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
